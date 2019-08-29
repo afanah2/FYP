@@ -1,0 +1,74 @@
+{% extends "maps/base.html" %}
+{% block content %}
+
+<header class="site-header">
+     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+               <div class="left-side">
+                    <a class="navbar-brand mr-4" href="{% url 'Maps-Home' %}">Where To Next</a>
+               </div>
+
+          <div class="center row">
+               <input id="search" class="search-bar" type="text"placeholder="Search..." />
+               <button type="button" class="button" id="add_location_b">Add location</button>
+          </div>
+
+
+          <a class="nav-item ml-auto text-light mr-3" href="#">About</a>
+          <a class="nav-item text-light" href="{% url 'Maps-Test' %}">Test Mode</a>
+
+
+     </nav>
+</header>
+
+
+<div class="my-container">
+
+     <div id="map" class="main-map">
+     </div>
+
+     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <form method="post" class="form input-form">
+               {% csrf_token %}
+               <label class="label-big">Algorithm Type:</label>
+               <select name = "algorithm" class="form-field">
+                    <option value="optimal">Optimal</option>
+                    <option value="heuristic">Heuristic</option>
+               </select>
+
+               <label class="label-big">Drivers Available:</label>
+               <select name = "driver_availability" class="form-field" id="driver-select">
+                    <option value="restricted">Restricted</option>
+                    <option value="flexible">Flexible</option>
+               </select>
+
+               <label for="no_of_drivers">Number of Drivers:</label>
+               <input id = "no-drivers" type="number" class="numeric-input form-field" name="no_of_drivers"
+                    min="1" value="1">
+
+               <label for="time_constraint">Time Restricted:</label>
+               <select name = "time_constraint" class="form-field">
+                    <option value="False">No</option>
+                    <option value="True">Yes</option>
+               </select>
+
+               Final Delivey Time: <input type="time" name="constraint_time">
+               <input type="hidden" id="cities" name="cities" value="">
+
+
+               <input type="hidden" id="cities" name="cities" value="">
+               <button type="submit" class="compute_route_b" id="compute_route_b">Compute Route</button>
+
+          </form>
+     </nav>
+
+
+<script>
+     function init(){
+          initTestMap();
+     }
+
+</script>
+
+
+{% endblock content %}

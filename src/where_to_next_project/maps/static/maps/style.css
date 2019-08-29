@@ -1,0 +1,113 @@
+.main-map{
+     height: 620px;
+     width: 100%;
+
+}
+
+.results-map{
+     height: 680px;
+     width: 100%;
+}
+
+.pac-container {
+    margin-top: 15px;
+}
+
+.label-big{
+     font-size: 14pt;
+}
+
+.col-right{
+     width: 20%;
+}
+.read-only{
+     background: grey;
+     color: grey;
+     border: grey;
+}
+.input-form{
+     height: 40px;
+     width: 100%;
+     color: white;
+     text-align: center;
+}
+
+.right{
+     float: right;
+}
+
+.form-field{
+     margin-right: .6rem;
+}
+
+table{
+     margin-bottom: 20px;
+     width: 100% ;
+}
+
+table, td, th {
+     border: 1pt solid black;
+     text-align: center;
+     padding: 4px;
+
+}
+
+.my-container{
+     width:100%;
+}
+
+.button {
+     background: #2A52BE;
+     border: none;
+     color: white;
+     text-align: center;
+     margin: 4px 10px;
+     border-radius: 3px;
+}
+
+.compute_route_b {
+     background: green;
+     font-size: 13pt;
+     color: white;
+     text-align: center;
+     margin-top: 4px;
+     margin-left: 20px;
+     border-radius: 3px;
+}
+
+.search-bar{
+     width: 80%;
+     border-radius: 5px;
+     height: auto;
+}
+
+
+.center{
+     margin-left: 7.5rem;
+     width: 50%;
+}
+
+
+html, body{
+      max-width: 100%;
+      overflow-x: hidden;
+}
+
+body {
+  background: #fafafa;
+  color: #333333;
+
+  margin-top: 3.5em;
+}
+
+.numeric-input{
+     width: 60px;
+     margin-top: 4px;
+     border-radius: 4px;
+     height: 25px;
+}
+
+.radio-button {
+     list-style:none;
+     margin: 0px;
+}
