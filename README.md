@@ -5,7 +5,7 @@ Where To Next is a Web Application developed for delivery companies. It is desig
 # Major Components:
 - dJango FW
 - BootStrap
-- Restful API
+- RPC API
 - SQL lite
 - Heuristic Search Algorithms
 - Clustering Algorithm
